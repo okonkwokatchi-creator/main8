@@ -36,7 +36,7 @@ export default function Customers() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredCustomers = customers?.filter(c => 
+  const filteredCustomers = (customers as any)?.filter((c: any) => 
     c.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
     c.email?.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -85,7 +85,7 @@ export default function Customers() {
             ) : filteredCustomers?.length === 0 ? (
               <TableRow><TableCell colSpan={4} className="text-center py-8 text-muted-foreground">No customers found.</TableCell></TableRow>
             ) : (
-              filteredCustomers?.map((customer) => (
+              filteredCustomers?.map((customer: any) => (
                 <TableRow key={customer.id} className="group">
                   <TableCell className="font-medium flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs">

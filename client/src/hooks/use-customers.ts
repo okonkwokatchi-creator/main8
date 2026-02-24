@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { api, buildUrl, type CreateCustomerRequest, type UpdateCustomerRequest } from "@shared/routes";
+import { api, buildUrl } from "@shared/routes";
 import { getQueryFn, apiRequest } from "@/lib/queryClient";
 
 export function useCustomers() {
@@ -24,7 +24,7 @@ export function useCustomer(id: number) {
 export function useCreateCustomer() {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: async (data: CreateCustomerRequest) => {
+    mutationFn: async (data: any) => {
       const res = await apiRequest("POST", api.customers.create.path, data);
       return res.json();
     },
@@ -37,7 +37,7 @@ export function useCreateCustomer() {
 export function useUpdateCustomer() {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: async ({ id, ...data }: { id: number } & UpdateCustomerRequest) => {
+    mutationFn: async ({ id, ...data }: { id: number } & any) => {
       const url = buildUrl(api.customers.update.path, { id });
       const res = await apiRequest("PUT", url, data);
       return res.json();

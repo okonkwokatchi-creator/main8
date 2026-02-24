@@ -172,7 +172,7 @@ function CreateSaleDialog({ open, onOpenChange, onCreate }: any) {
     try {
       // Find customer name if ID selected
       if (data.customerId && customers) {
-        const customer = customers.find(c => c.id === data.customerId);
+        const customer = (customers as any).find((c: any) => c.id === data.customerId);
         if (customer) data.customerName = customer.name;
       }
       
@@ -237,7 +237,7 @@ function CreateSaleDialog({ open, onOpenChange, onCreate }: any) {
                       </FormControl>
                       <SelectContent>
                         <SelectItem value="0">Walk-in Customer</SelectItem>
-                        {customers?.map(c => (
+                        {(customers as any)?.map((c: any) => (
                           <SelectItem key={c.id} value={c.id.toString()}>{c.name}</SelectItem>
                         ))}
                       </SelectContent>
