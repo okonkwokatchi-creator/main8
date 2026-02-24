@@ -1,0 +1,110 @@
+Create a full web-based business management app called “Kavid Plans”.
+
+CORE REQUIREMENTS
+
+1. App Type
+	•	Build a responsive WEB APP that works on:
+	•	PC browser
+	•	Mobile browser
+
+2. LOCAL DATABASE (VERY IMPORTANT)
+	•	ALL data must be stored locally on my PC.
+	•	Do NOT use cloud databases.
+	•	Use SQLite or local JSON files.
+	•	Database files must stay inside the project folder.
+	•	App must still work offline after loading.
+	•	Easy backup by copying the project folder.
+
+3. AUTHENTICATION (LOGIN SYSTEM)
+	•	Add secure login using:
+	•	Google / Gmail account (Google OAuth login).
+	•	Only logged-in users can access the dashboard.
+	•	Show user profile picture + email after login.
+	•	Include logout button.
+	•	Keep login simple and professional.
+
+4. DAILY SALES INPUT
+	•	Form fields:
+	•	Date (default today but editable)
+	•	Customer name (optional)
+	•	Product/service
+	•	Quantity
+	•	Price
+	•	Total auto-calculated
+	•	Save instantly to local database.
+
+5. EXPENSE MANAGEMENT
+	•	Add expenses with:
+	•	Category
+	•	Description
+	•	Amount
+	•	Date
+	•	Auto subtract from total balance.
+
+6. AUTOMATIC CALCULATIONS
+	•	Daily sales total
+	•	Daily expenses
+	•	Daily balance (profit/loss)
+	•	Monthly total sales
+	•	Monthly expenses
+	•	Monthly profit
+	•	Yearly totals automatically calculated.
+
+7. CUSTOMER ANALYTICS
+	•	Count total customers per month.
+	•	Customer history list.
+	•	Identify repeat customers.
+	•	Show number of customers this month.
+
+8. BUSINESS DASHBOARD
+
+Display:
+	•	Sales today
+	•	Monthly revenue
+	•	Yearly revenue
+	•	Highest single sale
+	•	Best sales day
+	•	Profit trend
+	•	Expense ratio
+	•	Customer count
+	•	Charts for sales trends.
+
+9. REPORTS
+	•	Monthly report page.
+	•	Yearly report page.
+	•	Export reports to CSV and PDF.
+
+10. UI / DESIGN
+	•	Mature, clean, professional business style.
+	•	Dashboard cards with icons.
+	•	Dark mode / light mode toggle.
+	•	Smooth modern animations.
+	•	Mobile-friendly layout.
+
+11. EXTRA FEATURES (SMART ADDITIONS)
+	•	Search and filter sales.
+	•	Edit and delete records safely.
+	•	Confirmation before deleting.
+	•	Automatic backup option.
+	•	Floating quick “Add Sale” button.
+	•	Notifications for daily summary.
+
+12. TECH STACK
+	•	Backend: Python (Flask or FastAPI)
+	•	Frontend: HTML + CSS + JavaScript
+	•	Database: SQLite or local JSON (stored locally)
+	•	Google OAuth for login.
+
+13. DATA SAFETY
+	•	Data persists after restarting app.
+	•	All data stored locally.
+	•	Easy to move to another PC.
+
+Generate complete project structure:
+	•	backend files
+	•	frontend templates
+	•	database setup
+	•	authentication setup
+	•	styling and scripts
+
+Make the project beginner-friendly so I can easily run and edit it later.

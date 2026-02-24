@@ -1,0 +1,136 @@
+Upgrade my existing app "Kavid Plans".
+
+The app currently:
+- Saves sales
+- Saves expenses
+- Calculates totals
+
+Now I want to add TWO major features:
+
+========================================
+PART 1 — DAILY FINANCIAL SUMMARY LOG
+========================================
+
+Add a new section called "Daily Financial Summary".
+
+This section must automatically generate a daily record like this:
+
+Example:
+February 10, 2026
+Total Sales: 100,000
+Total Expenses: 20,000
+Daily Profit / Balance: 80,000
+
+Requirements:
+
+1. Automatically calculate totals at the end of each day.
+2. Group all sales and expenses by date.
+3. For each date calculate:
+   dailySales = sum of sales for that date
+   dailyExpenses = sum of expenses for that date
+   dailyBalance = dailySales - dailyExpenses
+4. Store each daily summary in a separate table called:
+   "daily_summaries"
+5. Display summaries in a table format:
+   Date | Total Sales | Total Expenses | Balance
+6. Automatically update daily summary whenever a new sale or expense is added.
+7. Use ISO timestamp format for accurate grouping.
+8. Add filter options:
+   - View by day
+   - View by month
+   - View by year
+
+========================================
+PART 2 — INVOICE SYSTEM (SEPARATE SECTION)
+========================================
+
+Create a new section in the app called:
+"Invoice Management"
+
+IMPORTANT:
+The app remains in English.
+BUT printed invoices must be in French language only.
+
+----------------------------------------
+INVOICE FEATURES:
+----------------------------------------
+
+1. Editable Company Information:
+   - Company Name (editable)
+   - Address (editable)
+   - Phone Numbers (editable)
+   - Logo upload option
+2. Each invoice must automatically show at the top in bold and very visible:
+   NO STATISTIQUE : 484788F
+3. Invoice must include:
+   - Invoice Number (auto generated)
+   - Date (auto generated)
+   - Time (if possible)
+   - Client Name
+   - Client Phone
+   - Items table with:
+       Description
+       Quantity
+       Unit Price
+       Total
+   - Automatic Grand Total calculation
+
+----------------------------------------
+VERY IMPORTANT:
+----------------------------------------
+
+When printing or exporting invoice:
+
+All invoice content must appear in FRENCH language:
+
+Examples:
+- Facture
+- Numéro de facture
+- Date
+- Description
+- Quantité
+- Prix unitaire
+- Total
+- Montant total
+- Téléphone
+- Adresse
+
+But the rest of the app remains English.
+
+----------------------------------------
+PRINT FUNCTION:
+----------------------------------------
+
+Add:
+- "Print Invoice" button
+- It must open clean printable format
+- Hide navigation and dashboard when printing
+- Format must be professional and clean
+- Dark theme for app, but printed invoice white background
+
+----------------------------------------
+DATABASE REQUIREMENTS:
+----------------------------------------
+
+Create new table:
+"invoices"
+
+Fields:
+- invoiceNumber
+- clientName
+- clientPhone
+- items (JSON format)
+- totalAmount
+- createdAt (ISO timestamp)
+
+----------------------------------------
+UI REQUIREMENTS:
+----------------------------------------
+
+- Keep dark modern theme for the app.
+- Use clean dashboard layout.
+- No breaking existing features.
+- Do not delete current sales or expense data.
+- Code must integrate with current database structure.
+
+Make sure everything works with my existing app.
